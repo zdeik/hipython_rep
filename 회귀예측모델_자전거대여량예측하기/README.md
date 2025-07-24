@@ -74,6 +74,8 @@
 | **XGBRegressor** | **38.78** | **0.9559** | 0.4504 |
 | **LGBMRegressor**      | 40.42  | 0.9521 | 0.4446 |
 
+<img width="989" height="589" alt="Image" src="https://github.com/user-attachments/assets/8777472e-4ac0-441e-aaf3-beac18d165e6" />
+
 * **모델 선택 과정:**
     초기 5개 모델 비교 결과, **XGBoost**와 **LGBM**이 R² 점수에서 가장 높은 성능을 보였습니다.  R²가 높고 RMSE가 낮은 XGBRegressor와 LGBMRegressor를 채택하여 하이퍼 파라미터 조정하였습니다.
     그리고 XGB와 비슷한 성능을 가지고 빠른 학습 속도 장점을 지닌 LGBM을 선정하였습니다.
