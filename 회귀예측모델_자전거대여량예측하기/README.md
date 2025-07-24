@@ -72,17 +72,20 @@
 | RandomForest         | 42.30  | 0.9475 | **0.3200** |
 | GradientBoosting     | 70.02  | 0.8563 | 0.7120 |
 | **XGBRegressor** | **38.78** | **0.9559** | 0.4504 |
-| LGBMRegressor        | 40.42  | 0.9521 | 0.4446 |
+| **LGBMRegressor**      | 40.42  | 0.9521 | 0.4446 |
 
 * **모델 선택 과정:**
-    초기 5개 모델 비교 결과, **XGBoost**와 **LGBM**이 R² 점수에서 가장 높은 성능을 보였습니다. 하지만 RMSLE 지표에서는 **RandomForest**가 가장 우수하여, 최종적으로 R²가 높은 **LGBM**과 RMSLE가 낮은 **RandomForest** 두 모델의 하이퍼파라미터 튜닝을 진행하여 최종 모델을 선정했습니다.
+    초기 5개 모델 비교 결과, **XGBoost**와 **LGBM**이 R² 점수에서 가장 높은 성능을 보였습니다. 하지만 RMSLE 지표에서는 **RandomForest**가 가장 우수하여, 최종적으로 R²가 높고 RMSE가 낮은 XGBRegressor와 LGBMRegressor를 채택하여 하이퍼 파라미터 조정 하였습니다.
 
 * **최종 튜닝 모델 성능 비교 (테스트 데이터 기준):**
 
-| 모델                 | RMSE   | R²     | RMSLE  |
-| :------------------- | :----- | :----- | :----- |
-| RandomForest (Tuned) | 42.30  | 0.9475 | **0.3213** |
-| **LGBM (Tuned)** | **36.61** | **0.9607** | 0.4201 |
+| 모델                   | 하이퍼파라미터 요약                                                                                                                                                              | CV RMSE     | Test RMSE   | R² 점수      | RMSLE  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- | ---------- | ------ |
+| **XGBRegressor**     | `learning_rate=0.1`, `max_depth=5`, `n_estimators=700`, `subsample=0.8`                                                                                                 | 37.6702     | 37.6436     | 0.9585     | 0.4762 |
+| **LGBM #1**          | `learning_rate=0.05`, `max_depth=20`, `n_estimators=500`, `num_leaves=50`                                                                                               | 37.3254     | 37.5303     | 0.9587     | 0.4038 |
+| **LGBM #2**          | `learning_rate=0.05`, `max_depth=16`, `n_estimators=650`, `num_leaves=50`                                                                                               | 37.1475     | 37.2402     | 0.9593     | 0.4126 |
+| **LGBM Final Model** | `learning_rate=0.05`, `max_depth=15`, `n_estimators=650`, `num_leaves=60`, `min_child_samples=10`, <br>`feature_fraction=0.7`, `bagging_fraction=0.9`, `bagging_freq=5` | **36.1635** | **36.6122** | **0.9607** | 0.4201 |
+
 
 * **변수 중요도 (Feature Importance):** 피처 선택의 근거로 활용된 초기 랜덤 포레스트 모델의 변수 중요도입니다. `hour`가 예측에 가장 큰 영향을 미치는 변수임을 확인했습니다.
     <img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/4a382596-92c5-4211-82af-50083ba25289" />
