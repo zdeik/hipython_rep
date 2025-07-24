@@ -39,9 +39,11 @@
     * 타겟 변수인 `count`의 분포가 오른쪽으로 크게 치우쳐져 있어, 모델 성능 개선을 위해 **로그 변환(Log Transformation)** 적용을 고려했습니다.
 
 <p align="center">
-<img width="1001" height="544" alt="Image" src="https://github.com/user-attachments/assets/b2f2f02e-1913-4cc1-aada-34a56540fe04" />
-<img width="1045" height="544" alt="Image" src="https://github.com/user-attachments/assets/5ff47e25-4f94-4e79-9c42-bd1ee424ba6f" />
-<img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/63729af3-4200-4bb7-90db-4770140edb9a" />
+  <img src="https://github.com/user-attachments/assets/b2f2f02e-1913-4cc1-aada-34a56540fe04" width="32%">
+  &nbsp;
+  <img src="https://github.com/user-attachments/assets/5ff47e25-4f94-4e79-9c42-bd1ee424ba6f" width="32%">
+  &nbsp;
+  <img src="https://github.com/user-attachments/assets/63729af3-4200-4bb7-90db-4770140edb9a" width="32%">
 </p>
 
 ### 2. 데이터 전처리 및 피처 엔지니어링
