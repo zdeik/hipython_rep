@@ -1,10 +1,10 @@
-# 자전거 수요 예측 모델 개발 프로젝트 (Bike Sharing Demand Prediction)
+# 🚲 자전거 수요 예측 모델 개발 프로젝트 (Bike Sharing Demand Prediction)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 프로젝트 소개 (Project Overview)
+## 🚀 프로젝트 소개 (Project Overview)
 
 이 프로젝트는 캐글(Kagle)의 **[Bike Sharing Demand](https://www.kaggle.com/c/bike-sharing-demand/data?select=train.csv)** 데이터를 활용하여, 특정 시간대의 자전거 대여량을 예측하는 머신러닝 모델을 개발하는 것을 목표로 합니다. EDA, 피처 엔지니어링, 모델 비교 및 하이퍼파라미터 튜닝의 전 과정을 거쳐 최적의 예측 모델을 구축했습니다.
 
@@ -12,7 +12,7 @@
 
 ***
 
-## 기술 스택 (Tech Stack)
+## 🛠️ 기술 스택 (Tech Stack)
 
 프로젝트에 사용된 주요 라이브러리와 도구는 다음과 같습니다.
 
@@ -27,7 +27,7 @@
 
 ***
 
-## 프로젝트 수행 과정 (Workflow)
+## 📝 프로젝트 수행 과정 (Workflow)
 
 ### 1. 데이터 탐색 (Exploratory Data Analysis)
 
@@ -45,6 +45,10 @@
 모델의 예측 성능을 높이기 위해 다음과 같은 전처리 및 피처 엔지니어링 과정을 거쳤습니다.
 
 * **날짜 데이터 파싱:** `datetime` 컬럼에서 `year`, `month`, `day`, `hour`, `weekday` 정보를 추출하여 새로운 변수로 추가했습니다.
+* **타겟 변수 처리:**
+    * EDA 단계에서 `count` 변수의 분포가 왜곡된 것을 확인하고 로그 변환을 테스트했습니다.
+    * 하지만 실제 실험 결과, RandomForest, XGBoost, LGBM과 같은 트리 기반 모델들은 타겟 변수의 분포에 강인한 모습을 보였습니다.
+    * 오히려 **원본 타겟을 사용했을 때 더 나은 성능(RMSE, R²)을 기록**하여 최종 모델은 **원본 타겟(`count`)을 그대로 사용**하기로 결정했습니다.
 * **이상치 제거:** 샘플이 1개뿐인 `weather = 4` (악천후) 데이터를 이상치로 간주하여 제거했습니다.
 * **피처 선택 (Feature Selection):**
     * `casual`, `registered`는 타겟 변수인 `count`와 직접적인 관계가 있어 제거했습니다.
@@ -79,7 +83,7 @@
 
 ***
 
-## 결론 및 요약 (Conclusion & Summary)
+## 💡 결론 및 요약 (Conclusion & Summary)
 
 * **결론:** 다양한 모델 중 **하이퍼파라미터 튜닝을 거친 LightGBM 모델이 Test RMSE 36.61, R² 0.96**으로 가장 우수한 성능을 보였습니다.
 * **주요 성공 요인:**
@@ -91,4 +95,4 @@
 
 ## ✒️ 작성자 (Author)
 
-* `kiedz`
+* ` kiedz `
