@@ -88,7 +88,7 @@
 
 
 * **변수 중요도 (Feature Importance):** 피처 선택의 근거로 활용된 초기 랜덤 포레스트 모델의 변수 중요도입니다. `hour`가 예측에 가장 큰 영향을 미치는 변수임을 확인했습니다.
-    <img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/4a382596-92c5-4211-82af-50083ba25289" />
+    <img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/120c10e6-b6c5-464e-95fc-ebd122ad6e10" />
 
 ***
 
