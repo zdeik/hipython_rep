@@ -1,10 +1,10 @@
-# 🚲 자전거 수요 예측 모델 개발 프로젝트 (Bike Sharing Demand Prediction)
+# 자전거 수요 예측 모델 개발 프로젝트 (Bike Sharing Demand Prediction)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🚀 프로젝트 소개 (Project Overview)
+## 프로젝트 소개 (Project Overview)
 
 이 프로젝트는 캐글(Kagle)의 **[Bike Sharing Demand](https://www.kaggle.com/c/bike-sharing-demand/data?select=train.csv)** 데이터를 활용하여, 특정 시간대의 자전거 대여량을 예측하는 머신러닝 모델을 개발하는 것을 목표로 합니다. EDA, 피처 엔지니어링, 모델 비교 및 하이퍼파라미터 튜닝의 전 과정을 거쳐 최적의 예측 모델을 구축했습니다.
 
@@ -12,7 +12,7 @@
 
 ***
 
-## 🛠️ 기술 스택 (Tech Stack)
+## 기술 스택 (Tech Stack)
 
 프로젝트에 사용된 주요 라이브러리와 도구는 다음과 같습니다.
 
@@ -27,7 +27,7 @@
 
 ***
 
-## 📝 프로젝트 수행 과정 (Workflow)
+## 프로젝트 수행 과정 (Workflow)
 
 ### 1. 데이터 탐색 (Exploratory Data Analysis)
 
@@ -38,7 +38,11 @@
     * 월별/계절별 주기성이 있으며, **연도(year)**가 증가함에 따라 전반적인 대여량이 상승하는 추세가 확인되었습니다.
     * 타겟 변수인 `count`의 분포가 오른쪽으로 크게 치우쳐져 있어, 모델 성능 개선을 위해 **로그 변환(Log Transformation)** 적용을 고려했습니다.
 
-![시간대별 평균 대여량](https://raw.githubusercontent.com/user-attachments/assets/19f6a27e-857c-4da6-b924-d2e8fc37812f)
+<p align="center">
+<img width="1001" height="544" alt="Image" src="https://github.com/user-attachments/assets/b2f2f02e-1913-4cc1-aada-34a56540fe04" />
+<img width="1045" height="544" alt="Image" src="https://github.com/user-attachments/assets/5ff47e25-4f94-4e79-9c42-bd1ee424ba6f" />
+<img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/63729af3-4200-4bb7-90db-4770140edb9a" />
+</p>
 
 ### 2. 데이터 전처리 및 피처 엔지니어링
 
@@ -83,7 +87,7 @@
 
 ***
 
-## 💡 결론 및 요약 (Conclusion & Summary)
+## 결론 및 요약 (Conclusion & Summary)
 
 * **결론:** 다양한 모델 중 **하이퍼파라미터 튜닝을 거친 LightGBM 모델이 Test RMSE 36.61, R² 0.96**으로 가장 우수한 성능을 보였습니다.
 * **주요 성공 요인:**
