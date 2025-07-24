@@ -75,7 +75,7 @@
 | **LGBM (Tuned)** | **36.61** | **0.9607** | 0.4201 |
 
 * **변수 중요도 (Feature Importance):** 피처 선택의 근거로 활용된 초기 랜덤 포레스트 모델의 변수 중요도입니다. `hour`가 예측에 가장 큰 영향을 미치는 변수임을 확인했습니다.
-    ![Feature Importance](https://raw.githubusercontent.com/user-attachments/assets/dd3c4156-f076-4d7a-8fbe-65d8364de137)
+    <img width="877" height="544" alt="Image" src="https://github.com/user-attachments/assets/4a382596-92c5-4211-82af-50083ba25289" />
 
 ***
 
