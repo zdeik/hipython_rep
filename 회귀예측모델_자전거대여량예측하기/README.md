@@ -75,7 +75,8 @@
 | **LGBMRegressor**      | 40.42  | 0.9521 | 0.4446 |
 
 * **모델 선택 과정:**
-    초기 5개 모델 비교 결과, **XGBoost**와 **LGBM**이 R² 점수에서 가장 높은 성능을 보였습니다. 하지만 RMSLE 지표에서는 **RandomForest**가 가장 우수하여, 최종적으로 R²가 높고 RMSE가 낮은 XGBRegressor와 LGBMRegressor를 채택하여 하이퍼 파라미터 조정 하였습니다.
+    초기 5개 모델 비교 결과, **XGBoost**와 **LGBM**이 R² 점수에서 가장 높은 성능을 보였습니다.  R²가 높고 RMSE가 낮은 XGBRegressor와 LGBMRegressor를 채택하여 하이퍼 파라미터 조정하였습니다.
+    그리고 XGB와 비슷한 성능을 가지고 빠른 학습 속도 장점을 지닌 LGBM을 선정하였습니다.
 
 * **최종 튜닝 모델 성능 비교 (테스트 데이터 기준):**
 
