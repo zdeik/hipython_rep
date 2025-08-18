@@ -34,4 +34,4 @@ def update_bar_chart(slider_range):
 #서버 실행
 app.run(debug=True)
 
-#python app.py
+#python 72.dash_test.py
