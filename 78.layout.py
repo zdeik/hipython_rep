@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
+
 
 #layout 요소
 # colums는 요소를 왼쪽 -> 오른쪽으로 배치할 수 있다.
@@ -43,3 +45,4 @@ st.table(df)
 st.divider()
 
 st.json(data)
+st.divider()
